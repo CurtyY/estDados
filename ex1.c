@@ -13,7 +13,7 @@ Ação:
 
 	- Após determinar o tamanho de cada array e inserir os números ,
 	o programa deve comparar os dois arrays, e retornar quais os números
-	presentes que estão presentes apenas em um dos arrays.
+	presentes no array 1 e não no array 2.
 
 
 Saidas:
