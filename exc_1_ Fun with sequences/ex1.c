@@ -13,7 +13,11 @@ Ação:
 
 	- Após determinar o tamanho de cada array e inserir os números ,
 	o programa deve comparar os dois arrays, e retornar quais os números
+<<<<<<< HEAD:exc_1_ Fun with sequences/ex1.c
 	presentes no primeiro array e não no segundo.
+=======
+	presentes no array 1 e não no array 2.
+>>>>>>> c11a61c595d716c8320fb3a2e94d331a80da8610:ex1.c
 
 
 Saidas:
