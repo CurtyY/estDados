@@ -64,18 +64,18 @@ int main()
 	cin >> N;
 	cin >> Q;
 
-	Lista* root = get_No();
+	Lista* TODO = get_No();
 
 	for(int i=0 ; i<N ; i++)
 		{
 			cin >> nPalavra;
-			cnstr(root,nPalavra);
+			cnstr(TODO,nPalavra);
 		}
 
 		while(Q--)
 			{
 				cin >> nPalavra;
-				int ans = verifica(root,nPalavra);
+				int ans = verifica(TODO,nPalavra);
 				cout << ans << endl;
 			}
 }
