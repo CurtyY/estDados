@@ -1,5 +1,6 @@
-#include <bits/stdc++.h> // chama todos os includes
-
+//#include <bits/stdc++.h> // chama todos os includes
+#include <iostream>
+#include <stdio.h>
 using namespace std;
 
 class Node{
@@ -23,11 +24,12 @@ class Node{
 class Fila{
     private:
         Node *Inicio, *Final;
-
+        int tamanho;
     public:
         Fila()
         {
             Inicio=Final=NULL;
+            tamanho=0;
         }
 
         bool fVazia();
@@ -36,17 +38,18 @@ class Fila{
         void Reverse();
         void toFront(int);
         void Push_back(int);
-        int tamFila();
+       // int tamFila();
 
 };
 
 bool Fila::fVazia(){
-    if(tamFila()==0)
+    if(tamanho==0)
     return true;
     else
     return false;
 
 }
+/*
 int Fila::tamFila()
 {
     int tam = 0;
@@ -59,7 +62,7 @@ int Fila::tamFila()
         return (tam);
     }
 
-}
+} */
 void Fila::Push_back(int info){
 
     if(fVazia()){
@@ -67,8 +70,11 @@ void Fila::Push_back(int info){
     } else{
             Final->proximo = new Node(info);
             Final = Final->proximo;
+            tamanho++;
         }
+
 }
+
 
 int Fila::Front() //imprime o número da frente e depois apaga
 {
@@ -80,6 +86,7 @@ int Fila::Front() //imprime o número da frente e depois apaga
         Node *tmp = Inicio;
         Inicio = Inicio->proximo;
         delete tmp;
+        tamanho--;
     }
         else
     {
@@ -96,6 +103,7 @@ int Fila::Front() //imprime o número da frente e depois apaga
             Node *tmp = Final;
             Final = Final->proximo;
             delete tmp;
+            tamanho--;
         }
             else
         {
@@ -106,7 +114,7 @@ int Fila::Front() //imprime o número da frente e depois apaga
 
 void Fila::Reverse() //reverte todos os elementos da fila
 {
-    int v = tamFila();
+    int v = tamanho;
     for(int i=1;i<v;i++) //utiliza o tamanho da fila enquanto contador for menor que o tamanho, então i++
     {
             int info = Inicio->info;
@@ -128,6 +136,8 @@ void Fila::toFront(int f) // Coloca um numero na frente "Preferencial"
         tmp->proximo=Inicio;
         Inicio=tmp;
         }
+        tamanho++;
+
     }
 
  int main(){

@@ -1,4 +1,6 @@
-#include <bits/stdc++.h>
+//#include <bits/stdc++.h>
+#include <iostream>
+#include <stdio.h>
 //permite usar qualquer biblioteca padrão C / C ++ sem adicionar "includes" um a um.
 using namespace std;
 //#define MAXTAM 400
