@@ -8,11 +8,11 @@ class Node{
     Node *proximo;
     Node()
     {
-        proximo=0;
+        proximo=NULL;
     }
 
 
-    Node(int nInfo, Node* nProximo=0){
+    Node(int nInfo, Node* nProximo=NULL){
 
         info=nInfo;
         proximo=nProximo;
@@ -27,7 +27,7 @@ class Fila{
     public:
         Fila()
         {
-            Inicio=Final=0;
+            Inicio=Final=NULL;
         }
 
         bool fVazia();
@@ -41,7 +41,10 @@ class Fila{
 };
 
 bool Fila::fVazia(){
-    return(Inicio==0);
+    if(tamFila()==0)
+    return true;
+    else
+    return false;
 
 }
 int Fila::tamFila()
@@ -100,6 +103,7 @@ int Fila::Front() //imprime o número da frente e depois apaga
         }
 
     }
+
 void Fila::Reverse() //reverte todos os elementos da fila
 {
     int v = tamFila();
