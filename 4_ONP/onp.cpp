@@ -1,7 +1,8 @@
 //#include <bits/stdc++.h>
+//permite usar qualquer biblioteca padrão C / C ++ sem adicionar "includes" um a um.
+
 #include <iostream>
 #include <stdio.h>
-//permite usar qualquer biblioteca padrão C / C ++ sem adicionar "includes" um a um.
 using namespace std;
 //#define MAXTAM 400
 class Node{
