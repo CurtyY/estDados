@@ -1,4 +1,9 @@
 #include<bits/stdc++.h>
+
+/*o codigo cria as coordenadas em pre ordem com as coordenadas de pos e em ordem para que sejam todas na mesma arvore
+  e eu comparo a coordenada pre ordem gerada, com a coordenada pre ordem que inserida pelo usuario, se for diferente
+  quer dizer que não são as coordenadas da mesma arvore. Não é a melhor resolução, mas deu certo :)
+ */
 using namespace std;
 
 struct Node
@@ -60,8 +65,8 @@ int preOrder(Node* node)
     preOrder(node->left);
     preOrder(node->right);
 }
-int TreeToArray (Node *node, int arr[], int i)
-{
+int TreeToArray (Node *node, int arr[], int i) 
+{// aqui transformo as coordenadas da arvore pre ordem em um array
     if (node == NULL) return i;
     arr[i] = node->data;
     i++;
@@ -70,8 +75,9 @@ int TreeToArray (Node *node, int arr[], int i)
     if (node->right != NULL)
     i = TreeToArray(node->right, arr, i);
     return i;
-}
-int compare(int A[],int B[],int tam){
+} 
+int compare(int A[],int B[],int tam){  
+    //compara o array gerado na função anterior, com o array das coordenadas inseridas pelo usuario
     int igual=0;
 
     for (int i=0; i<tam; i++) {
@@ -118,7 +124,6 @@ int main()
             }else{
                 cout<<"no";
             }
-
 
 
     return 0;
