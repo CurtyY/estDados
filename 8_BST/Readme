@@ -1,0 +1,1 @@
+Esse código pode estar dando erro de tempo no spoj, por eu estar inserindo o elemento no nó da arvore e logo em seguida fazendo uma procura dentro da arvore para receber o numero de deslocamentos até ele.
